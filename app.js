@@ -30,12 +30,24 @@ app.get('/pokemons', (req, res) => {
     {name: 'Pidgeotto'},
     {name: 'Bulbasaur'},
     {name: 'Charmander'},
-    {name: 'Squirt'},
+    {name: 'Squirtle'},
     {name: 'Krabby'},
     {name: 'Primeape'},
     {name: 'Muk'},
     {name: 'Tauros'}])
 })
+
+app.post('/series', (req, res) => {
+  console.log("Just got a request!")
+  res.json([
+    {name: 'Better Call Saul'},
+    {name: 'Breaking Bad'},
+    {name: 'Game of Thrones'}])
+})
+
+app.get('/series', (req, res) => {
+})
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
